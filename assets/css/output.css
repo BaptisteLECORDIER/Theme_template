@@ -1,0 +1,297 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.d-none {
+  display: none;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-jc-start {
+  justify-content: flex-start;
+}
+.flex-jc-end {
+  justify-content: flex-end;
+}
+.flex-jc-center {
+  justify-content: center;
+}
+.flex-jc-space-a {
+  justify-content: space-around;
+}
+.flex-jc-space-b {
+  justify-content: space-between;
+}
+
+.no-style-a {
+  text-decoration: none;
+}
+
+@keyframes header-up {
+  from {
+    bottom: 0px;
+  }
+  to {
+    bottom: 500px;
+  }
+}
+@keyframes header-down {
+  from {
+    bottom: 500px;
+  }
+  to {
+    bottom: 0px;
+  }
+}
+@keyframes opening_nav {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 200px;
+  }
+}
+@keyframes closing_nav {
+  from {
+    height: 200px;
+  }
+  to {
+    height: 0px;
+  }
+}
+.nav {
+  height: 100vh;
+  width: 100vw;
+}
+.nav .horizontal_navbar {
+  height: 40px;
+  width: 100%;
+  background-color: rgb(26, 26, 26);
+}
+@media screen and (min-width: 800px) {
+  .nav .horizontal_navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.nav .horizontal_navbar .main_nav {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0px 20px 0px 20px;
+}
+.nav .horizontal_navbar .main_nav .burger_menu {
+  width: 40px;
+}
+@media screen and (min-width: 800px) {
+  .nav .horizontal_navbar .main_nav .burger_menu {
+    display: none;
+  }
+}
+.nav .horizontal_navbar .main_nav > * {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.nav .horizontal_navbar .in_menu {
+  box-sizing: border-box;
+  padding: 0px 20px 0px 20px;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+@media screen and (min-width: 800px) {
+  .nav .horizontal_navbar .in_menu {
+    height: 100%;
+    width: auto;
+  }
+}
+@media screen and (max-width: 799px) {
+  .nav .horizontal_navbar .in_menu {
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(26, 26, 26);
+  }
+}
+.nav .horizontal_navbar .in_menu > * {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 20px 0px 20px;
+}
+@media screen and (max-width: 799px) {
+  .nav .horizontal_navbar .in_menu > * {
+    justify-content: left;
+    flex-direction: column;
+  }
+}
+.nav .horizontal_navbar .in_menu > * > * {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0px 7px 0px 7px;
+}
+@media screen and (max-width: 799px) {
+  .nav .horizontal_navbar .in_menu > * > * {
+    margin-top: 7px;
+    margin-bottom: 7px;
+  }
+}
+@media screen and (max-width: 799px) {
+  .nav .horizontal_navbar .in_menu .media_links {
+    flex-direction: row;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  .close_at_start {
+    height: 0px;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  .opening_nav {
+    animation-name: opening_nav;
+    animation-duration: 0.45s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  .closing_nav {
+    animation-name: closing_nav;
+    animation-duration: 0.45s;
+    animation-fill-mode: forwards;
+  }
+}
+
+.fixed_nav {
+  position: fixed;
+}
+.fixed_nav > * {
+  position: relative;
+}
+
+@media screen and (min-width: 800px) {
+  .header-up {
+    position: relative;
+    animation-name: header-up;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .header-down {
+    position: relative;
+    animation-name: header-down;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+  }
+}
+
+.txt-main {
+  color: #ffffff;
+}
+.txt-second {
+  color: #ff9500;
+}
+.txt-white {
+  color: #ffffff;
+}
+.txt-light {
+  color: #eeeeee;
+}
+.txt-dark {
+  color: #262626;
+}
+.txt-none {
+  font-size: 0px;
+}
+.txt-xx-sm {
+  font-size: 5px;
+}
+.txt-x-sm {
+  font-size: 7px;
+}
+.txt-sm {
+  font-size: 10px;
+}
+.txt-md {
+  font-size: 12px;
+}
+.txt-l {
+  font-size: 15px;
+}
+.txt-x-l {
+  font-size: 17px;
+}
+.txt-xx-l {
+  font-size: 20px;
+}
+.txt-cut {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/*# sourceMappingURL=output.css.map */
